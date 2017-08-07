@@ -14,7 +14,3 @@ PORTD = 0x0F;  // Make lower nibble of PORTD as HIGH and higher nibble as LOW
  
 PORTD = (1<<PD0) | (1<<PD3) | (1<<PD6); // Make PD0,PD3,PD6 HIGH,
  
- 
-TRISB = 0x00;  // Configure PORTB as Output
-TRISD = 0xff;  // Configure PORTD as Input
-PORTD = PORTB; // Read the data from PORTB and send it to PORTD.

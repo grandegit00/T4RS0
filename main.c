@@ -11,11 +11,7 @@ void DELAY_ms(unsigned int ms_Count)
 
 int main() 
 {
-  /* Configure all the ports as Output */
-    TRISA = 0x00;
-    TRISB = 0x00;
-    TRISC = 0x00;
-    TRISD = 0x00; 
+
     
     while(1)
     {
