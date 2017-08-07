@@ -1,18 +1,25 @@
 #include <pic16F18854.h>
 
+#include "tipos.h"
+#include "macros.h"
+#include "global.h"
+#include "config_system.h"
+
+
 void DELAY_ms(unsigned int ms_Count)
 {
-    unsigned int i,j;
-    for(i=0;i<ms_Count;i++)
+    uInt8 i,j;
+    
+    for(i = 0; i< ms_Count; i ++)
     {
-        for(j=0;j<1000;j++);
+        for(j = 0; j < 1000; j ++);
     }
 }
 
 int main() 
 {
 
-    
+    //- main bucle
     while(1)
     {
         PORTA = 0xff; /* Turn ON all the leds connected to Ports */

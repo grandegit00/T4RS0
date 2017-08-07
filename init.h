@@ -1,6 +1,6 @@
 
-#ifndef GLOBAL_H_
-#define GLOBAL_H_
+#ifndef INIT_H_
+#define INIT_H_
 
 uInt8 g_estado_actual = 0;
 

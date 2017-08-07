@@ -42,6 +42,33 @@
 
 #define BIT_GET(PIN, BIT)       (PIN & (1 << BIT))        // hacemos una mascara, de forma que solo sera >0 si BIT es '1'
 
+//- MAPEO DE PULSADORES in/out
+#define PULSE_ON        PA2
+#define PULSE_OFF       PA3
+
+#define PULSE3         PA0
+#define PULSE4         PA5
+#define PULSE5         PA1
+#define PULSE6         PB3
+#define PULSE7         PB2
+#define PULSE8         PA4
+#define PULSE9         PB5 //--> Misma función RA3 (5) en 402S, 404S y 406S(off)
+#define PULSE10        PB4 //--> Misma función RA3 (5) en 402S, 404S y 406S(off)
+
+#define OUT3            PC5
+#define OUT4            PC6
+#define OUT5            PC7
+#define OUT6            PB0
+#define OUT7            PB1
+#define OUT8            PC4
+#define OUT9            PC5
+#define OUT10           PC5
+
+
+
+//*****************************************************************************
+
+
 // POSICIONES MEMORIA EEPROM
 #define MEMO_IDENTIFICADOR      100   // 4 BYTES
 #define MEMO_RSSI         110   // 2 BYTES
