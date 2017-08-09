@@ -2,5 +2,7 @@
 #define FUNCIONES_H_
 
 
+void init(void);
+
 
 #endif
