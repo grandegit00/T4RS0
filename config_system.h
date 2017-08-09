@@ -24,22 +24,22 @@
 
  */
 
-//- PORTA all IN
-TRISA = 0xFF;
+// //- PORTA all IN
+// TRISA = 0xFF;
 
-//- PORTC all OUT
-TRISC = 0x00;
+// //- PORTC all OUT
+// TRISC = 0x00;
 
-//- PORTB IN & OUT
-TRISB = 0x3C;
+// //- PORTB IN & OUT
+// TRISB = 0x3C;
 
-//- Set Ini STATE for OUTPUT --> '0'
-PORTC = 0x00;   // - all output LOW
+// //- Set Ini STATE for OUTPUT --> '0'
+// PORTC = 0x00;   // - all output LOW
 
-PORTB & = ~(1<<PB0);
-PORTB & = ~(1<<PB1);
-PORTB & = ~(1<<PB6);
-PORTB & = ~(1<<PB7);
+// PORTB & = ~(1<<PB0);
+// PORTB & = ~(1<<PB1);
+// PORTB & = ~(1<<PB6);
+// PORTB & = ~(1<<PB7);
 
 
 #endif

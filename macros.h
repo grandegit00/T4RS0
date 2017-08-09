@@ -25,6 +25,7 @@
 #define ON                1               // estados para las valvulas
 #define OFF               0
 
+
 #define IN_               1
 #define OUT_              0
 
@@ -46,14 +47,14 @@
 #define PULSE_ON        PA2
 #define PULSE_OFF       PA3
 
-#define PULSE3         PA0
-#define PULSE4         PA5
-#define PULSE5         PA1
-#define PULSE6         PB3
-#define PULSE7         PB2
-#define PULSE8         PA4
-#define PULSE9         PB5 //--> Misma función RA3 (5) en 402S, 404S y 406S(off)
-#define PULSE10        PB4 //--> Misma función RA3 (5) en 402S, 404S y 406S(off)
+#define PULSE3         PA0 //0
+#define PULSE4         PA5 //1 
+#define PULSE5         PA1 //2
+#define PULSE6         PB3 //3
+#define PULSE7         PB2 //4
+#define PULSE8         PA4 //5 
+#define PULSE9         PB5 //6--> Misma función RA3 (5) en 402S, 404S y 406S(off)
+#define PULSE10        PB4 //7--> Misma función RA3 (5) en 402S, 404S y 406S(off)
 
 #define OUT3            PC5
 #define OUT4            PC6
@@ -63,6 +64,11 @@
 #define OUT8            PC4
 #define OUT9            PC5
 #define OUT10           PC5
+
+#define LED_RED         PC2
+#define LED_WHITE       PC1
+
+#define TIME_VALID_PULSE   3
 
 
 
