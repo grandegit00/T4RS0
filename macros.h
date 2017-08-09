@@ -44,23 +44,31 @@
 #define BIT_GET(PIN, BIT)       (PIN & (1 << BIT))        // hacemos una mascara, de forma que solo sera >0 si BIT es '1'
 
 //- MAPEO DE PULSADORES in/out
+//
+//______IN ________ IN ________ IN
 #define PULSE_ON        PA2
 #define PULSE_OFF       PA3
 
 #define PULSE3         PA0 //0
 #define PULSE4         PA5 //1 
 #define PULSE5         PA1 //2
+                           //
 #define PULSE6         PB3 //3
 #define PULSE7         PB2 //4
+                           //
 #define PULSE8         PA4 //5 
+                           //
 #define PULSE9         PB5 //6--> Misma función RA3 (5) en 402S, 404S y 406S(off)
 #define PULSE10        PB4 //7--> Misma función RA3 (5) en 402S, 404S y 406S(off)
 
+//__ OUT ____ OUT ____ OUT____
 #define OUT3            PC5
 #define OUT4            PC6
 #define OUT5            PC7
+
 #define OUT6            PB0
 #define OUT7            PB1
+
 #define OUT8            PC4
 #define OUT9            PC5
 #define OUT10           PC5
@@ -68,7 +76,12 @@
 #define LED_RED         PC2
 #define LED_WHITE       PC1
 
-#define TIME_VALID_PULSE   3
+#define POWER_ENCODER   PA7
+
+
+// project GEneral defines
+#define T_VALID_GOTO_ON    3
+#define T_VALID_GOTO_OFF   0
 
 
 

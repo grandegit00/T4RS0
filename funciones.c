@@ -38,8 +38,12 @@ void init_system(void)
  **/
 void init_registers()
 {
-    //- PORTA all IN
-  TRISA = 0xFF;
+  //PORTX &= ~(1<<PX0);  //bit in register to '0'
+  //PORTX |= (1<<PX1);   //bit in register to '1'
+
+    //- PORTA all IN but PA7 OUT
+  TRISA = 0x7F;
+ ;
 
   //- PORTC all OUT
   TRISC = 0x00;
@@ -102,31 +106,41 @@ void init_inputs()
 /**
  * { item_description }
  * Logic control when the Tx is ON
- * or the ON button hasn't been pushed at least
  */
 void system_ON_logic()
 {
+  
   if(BIT_COMPARE(PORTA, PULSE_OFF, ON))  // pulsado botton de Off
   {
     var_Global.array_control[1].read_state = TRUE;    // load value
     
     if(var_Global.array_control[1].actual_state != var_Global.array_control[1].read_state = TRUE)
     {
-      var_Global.array_control[1].actual_state == var_Global.array_control[1].read_state;
+      var_Global.array_control[1].actual_state = var_Global.array_control[1].read_state;
       var_Global.array_control[1].filtering = TRUE;
       var_Global.array_control[1].cont_filter = 0;
 
     }
 
-    if(var_Global.array_control[1].)
+    if(var_Global.array_control[1].cont_filter >= T_VALID_GOTO_OFF)
+    {
+      var_Global.array_control[1].filtering = FALSE;
+      var_Global.array_control[1].cont_filter = 0;
+      var_Global.system_state = OFF;
+      EPROM_write_byte(add_state, var_Global.system_state);
+      BIT_TO_HIGH(PORTC, LED_RED);
 
+    }
+  }
 
+  if(BIT_COMPARE(PORTA, PULSE3, ON))
+  {
+    // vamos por esta lógica
   }
 }
  /**
  * { item_description }
- * Logic control when the Tx is ON
- * or the ON button hasn't been pushed at least
+ * Logic control when the Tx is OFF
  */
  void system_OFF_logic()
 {

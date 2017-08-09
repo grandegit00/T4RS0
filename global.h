@@ -20,8 +20,8 @@ struct Global{
   uInt16      cont_valida_pulsado;
   unsigned    validando_pulsado;
   unsigned    envia_pulsacion;
-  uInt8       proceso_duando_id;  
-  unsigned    bandera_change_led;                // indica que el mensaje a enviar es de tipo PROG_ID
+  uInt8       proceso_duando_id;
+  unsigned    bandera_change_led;
   
   unsigned    cambia_estado_control;
   uInt16      cont_valida_pulsado_control;
