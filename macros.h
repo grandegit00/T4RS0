@@ -70,11 +70,11 @@
 #define OUT7            PB1
 
 #define OUT8            PC4
-#define OUT9            PC5
-#define OUT10           PC5
+// #define OUT9            PC5
+// #define OUT10           PC5
 
-#define LED_RED         PC2
-#define LED_WHITE       PC1
+#define LED_RED         PC1
+#define LED_WHITE       PC2
 
 #define POWER_ENCODER   PA7
 
@@ -82,6 +82,7 @@
 // project GEneral defines
 #define T_VALID_GOTO_ON    3
 #define T_VALID_GOTO_OFF   0
+#define T_VALID_PULSE_F    0
 
 
 
@@ -112,7 +113,7 @@
 // #define MODO_ACTIVACION_RELES    1
 //#define MODO_PROGRAMACION     2
 
-#define N_BOTONES           8 //pause 12   //16 *****
+#define N_BOTONES           6 //pause 12   //16 *****
 #define N_PULS_CONTROL          2
 
 //#define SEC_DUAL_TX_RX        {1, 2, 1, 2, 1, 2}

@@ -18,9 +18,17 @@ void DELAY_ms(unsigned int ms_Count)
     }
 }
 
+//- TODO TODO
+//confibgurar los TIMER para las especificaciones de tiempo 
+//cambiar la activacion fija de LED por la activacion de banderas de contadores
+//en los timers sera donde se aumenten los contadores siempre y cuando las
+//banderas de "filtering" de cada puerto esten activas
+
 int main() 
 {
+  //- here the system state is read from EEPROM
   init_system();
+  
   //- main bucle
   while(1)
   {
@@ -66,7 +74,7 @@ int main()
  */
 void timer1seg()
 {
-  for(uInt8 i = 0; i < 8; i ++)
+  for(uInt8 i = 0; i < N_BOTONES; i ++)
   {
     if(var_Global.array_buttons[i].filtering)
       var_Global.array_buttons[i].cont_filter ++;

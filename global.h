@@ -5,8 +5,8 @@
 
 struct boton{
 
-  // unsigned  port;
-  // unsigned  reg;
+  uInt8  port;
+  uInt8  reg;
   unsigned  actual_state;              // determina el estado estable del boton, ya validado
   unsigned  read_state;             // determina el estado leido, necesita superar el tiempo de filtrado para su validacion
   unsigned  filtering;                // indica que el estado del boton esta pasando el filtro anti rebotes
@@ -29,8 +29,13 @@ struct Global{
   
   unsigned    hay_buzzer;
 
+  unsigned    led_white_on_off;
+  unsigned    led_red_on_off;
+
   //-- BOTONES
   struct      boton array_buttons[8];
+  struct      boton array_outputs[8];
+
   
   //-- PULSADORES DE CONTROL
   struct      boton array_control[2];
